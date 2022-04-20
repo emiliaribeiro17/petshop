@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Cadastro Veterinário</title>
+	</head>
+	<body>
+		<h1>Cadastro Veterinário</h1>
+		<form th:action="@{/cadastroVeterinario}"
+		method="POST" th:object="${veterinario}">
+			id:<input type="number" 
+					th:field="*{id}"><br/>
+			nome:<input type="text" 
+					th:field="*{nome}"><br/>
+			crvm:<input type="text" 
+					th:field="*{crvm}"><br/>
+			especialidade:<input type="text" 
+					th:field="*{especialidade}"><br/>
+					
+					
+		<input type="submit" value="Cadastrar">
+		</form>
+	</body>
+</html>
